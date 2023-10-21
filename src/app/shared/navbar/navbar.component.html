@@ -1,0 +1,17 @@
+<div class="sidebar bg-dark">
+    <div class="sidebar-header">
+      <img 
+      src="https://st2.depositphotos.com/4035913/6124/i/450/depositphotos_61243831-stock-photo-letter-s-logo.jpg"
+
+       alt="Logo" class="logo">
+       
+    </div>
+    <hr>
+    <ul class="sidebar-nav">
+      <li (click)="setActive('dashboard')" [ngClass]="{ 'active': activeLink === 'dashboard' }">Dashboard</li>
+      <hr>
+      <li (click)="setActive('user-management')" [ngClass]="{ 'active': activeLink === 'user-management' }">User Management</li>
+      <hr>
+    </ul>
+  </div>
+  

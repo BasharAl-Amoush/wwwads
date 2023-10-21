@@ -1,0 +1,69 @@
+<div class="modal" [style.display]="isOpen ? 'block' : 'none'" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        
+        <div class="modal-content">
+           
+            <div class="modal-header">
+
+                <h5 class="modal-title"> Edit The User {{userId}} </h5>
+ <button type="button" class="btn ms-2 " (click)="closeModal()">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+                    <path fill="#f44336" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path><path fill="#fff" d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"></path><path fill="#fff" d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"></path>
+                    </svg></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" id="firstname" formControlName="firstname" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lastname" formControlName="lastname" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Reset Password:</label>
+                        <input type="password" id="password" formControlName="password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" formControlName="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone" formControlName="phone" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="countryCode">Country Code:</label>
+                        <input type="text" id="countryCode" formControlName="countryCode" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="timeZone">Time Zone:</label>
+                        <input type="text" id="timeZone" formControlName="timeZone" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role:</label>
+                        <select id="role" formControlName="role" class="form-control">
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <div class="text-right mt-3">
+                        <button type="submit" class="btn btn-success me-4">Submit</button>
+                    
+                        <button class="btn btn-danger ms-2">Block user</button>
+                    
+                        <button class="btn ms-5">
+                            <img 
+                                width="40px"
+                                height="40px"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAABe0lEQVR4nO2bwU7DMAyGvxO8Gxusr8N4OyYO28T7kAtGkVJph66kJG7T8v+ST7M627Kd75CANJv2wAUIgN2xkHx2bDB5m2gdG9I1JfUKPIz4xd+OyffMhhRSUmPJ93pMvl+sbH6tEau+R/YNJPVX6+ac31ZUfY+ECfPbiqruEUu2NlWL2/57AcKKRyDGXqzP9LHjSooQY3xLMccFXqwO+G7gSJtqMeZnKulwcxyuwSIIveAga3whusdnKgCDFf4YaMPTSCG9/BfrALtjv32ntv/iBeiVm1BtfxUAdQAaARxl2gFoCVpGZ+gUQMcg4gDyl6lACJEgQmHKR0YojFAYoTCOMqEwQmHL6AyhMEJhhMLkL1OhMEJhhMKUj4xQGKEwQmEcZUJhhMKW0RlCYYTCCIXJX6ZCYYTCCIUpHxmhMLomxyIofBq4w/c+8h0vf/cOCOkPWrw2P8tzu2ujbwdu3wi4PrjcjVxbbcWePAvQF+Hc2CPKkGJyT56t6Qd7vv65KA4vAwAAAABJRU5ErkJggg==">
+                            delete user
+                        </button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
